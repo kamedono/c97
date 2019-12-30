@@ -101,44 +101,6 @@ INSERT INTO `purchase` VALUES (1,29,2,1,'2019-12-08 13:01:05','2019-12-08 13:01:
 UNLOCK TABLES;
 
 --
--- Table structure for table `station`
---
-
-DROP TABLE IF EXISTS `station`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `station` (
-  `station_cd` int(11) NOT NULL,
-  `station_g_cd` int(11) NOT NULL,
-  `station_name` varchar(127) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_as_cs NOT NULL,
-  `station_name_k` varchar(127) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_as_cs NOT NULL,
-  `station_name_r` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_as_cs NOT NULL,
-  `line_cd` int(11) NOT NULL,
-  `pref_id` int(11) NOT NULL,
-  `post` varchar(8) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_as_cs NOT NULL,
-  `address` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_as_cs NOT NULL,
-  `lng` double NOT NULL,
-  `lat` double NOT NULL,
-  `open_ymd` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_as_cs DEFAULT NULL,
-  `close_ymd` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_as_cs DEFAULT NULL,
-  `e_status` int(11) NOT NULL,
-  `e_sort` int(11) NOT NULL,
-  PRIMARY KEY (`station_cd`),
-  KEY `station_name` (`station_name`),
-  KEY `point` (`lng`,`lat`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_as_cs ROW_FORMAT=DYNAMIC;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `station`
---
-
-LOCK TABLES `station` WRITE;
-/*!40000 ALTER TABLE `station` DISABLE KEYS */;
-/*!40000 ALTER TABLE `station` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `user`
 --
 
@@ -177,4 +139,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-12-30 11:24:11
+-- Dump completed on 2019-12-30 18:32:50
