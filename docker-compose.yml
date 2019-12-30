@@ -1,0 +1,8 @@
+version: '3.7'
+services:
+  db:
+    build: ./
+    ports:
+      - 3306:3306
+    volumes:
+      - ./config/my.cnf:/etc/mysql/my.cnf
